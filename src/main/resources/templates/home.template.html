@@ -1,0 +1,103 @@
+
+
+    {{> header.template.html}}
+    <!-- Start Header Section -->
+
+        <div class="banner" style="background-image: url('{{homeBanner.fields.backgroundImage.en-US.url}}')">
+            <div class="overlay">
+                <div class="container">
+                <div class="intro-text">
+                        <h1>{{homeBanner.fields.bannerHeading.en-US}} <span>{{homeBanner.fields.bannerSubheading.en-US}}</span></h1>
+                        <p class="bnrtxt">{{homeBanner.fields.bannerContent.en-US}}</p>
+                        <a href="{{homeBanner.fields.ctaAction.en-US}}" class="page-scroll btn btn-primary">{{homeBanner.fields.ctaLink.en-US}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header Section -->
+        
+        
+        <!-- Start About Us Section -->
+    <section id="about-section" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center wow fadeInDown" data-wow-duration="2s" data-wow-delay="50ms">
+                        <h2>{{ourStory.fields.titleOfSection.en-US}}</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+               <div class="col-md-5">
+                   <div class="about-img">
+
+                       {{#ourStory.fields.image.en-US}}
+                       <img src="{{fields.file.en-US.url}}" class="img-responsive" alt="About images">
+                       {{/ourStory.fields.image.en-US}}
+
+                   </div>
+               </div>
+               <div class="col-md-7">
+                   <div class="about-text">
+                        <p>{{ourStory.fields.text.en-US}}</p>
+                   </div>
+                   
+                   <div class="about-list">
+                       <h4>{{ourStory.fields.keyPointsHeading.en-US}}</h4>
+                       <ul>
+                           {{#ourStory.fields.keyPoints.en-US}}
+                           <li><i class="fa fa-check-square"></i>{{.}}</li>
+                           {{/ourStory.fields.keyPoints.en-US}}
+
+                       </ul>
+                   </div>
+                   
+               </div>
+                
+            </div>
+        </div>
+    </section>
+        
+        
+        <!-- Start Call to Action Section -->
+    {{#ctaBanner.fields.image.en-US}}
+    <section class="call-to-action" style="background-image: url('{{fields.file.en-US.url}}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 wow zoomIn" data-wow-duration="2s" data-wow-delay="300ms">
+                    <p>{{ctaBanner.fields.text.en-US}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{/ctaBanner.fields.image.en-US}}
+    <!-- End Call to Action Section -->
+        
+        
+        
+
+        <!-- End Testimonial Section -->
+
+    <!-- Start Client Section -->
+        <div id="client-section">
+            <h3 style="margin-bottom: 45px; text-align: center;">{{ourClient.fields.text.en-US}}</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="client-box">
+                            <ul class="client-list">
+                                {{#ourClient.fields.image.en-US}}
+                                <li><a href="#"><img src="{{fields.file.en-US.url}}" class="img-responsive" alt="Clients Logo"></a></li>
+                                {{/ourClient.fields.image.en-US}}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Client Section -->
+
+    {{> footer.template.html}}
+
+

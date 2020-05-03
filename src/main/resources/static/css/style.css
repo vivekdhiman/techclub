@@ -9,6 +9,7 @@
 body {
 	font-family: 'PT Sans Narrow', Arial, sans-serif;
 	font-size: 16px;
+	margin-top: -33px;
     color: #111;
     line-height: 21px;
 /*	font-weight: 300;*/
@@ -290,8 +291,8 @@ ul.social-list li a:hover i {
 
 .navbar {
 	margin-bottom: 0;
+	margin-bottom: 14px;
 	background: #fff;
-    border-bottom: 1px solid #f2f2f2 !important;
 	border: none;
 	border-radius: 0;
     -webkit-border-radius: 0;
@@ -469,13 +470,19 @@ a.navbar-brand {
 .banner {
     text-align: center;
     color: #fff;
-    background: url(../images/banner.jpg) no-repeat;
     background-attachment: scroll;
     background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.banner p.bnrtxt {
+    max-width: 810px;
+    font-size: 32px;
+    line-height: 42px;
+    margin-left: 174px;
 }
 
 .banner .overlay {
@@ -2142,4 +2149,7 @@ textarea {
     margin-top: 30px;
 }
 
+.navbar-brand img {
+    width: 10%;
+}
 

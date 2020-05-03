@@ -1,0 +1,113 @@
+
+
+{{> header.template.html}}
+
+<div class="banner" style="background-image: url('{{aboutBanner.fields.backgroundImage.en-US.url}}')">
+    <div class="overlay">
+        <div class="container">
+            <div class="intro-text">
+                <h1>{{aboutBanner.fields.bannerHeading.en-US}} <span>{{aboutBanner.fields.bannerSubheading.en-US}}</span></h1>
+                {{#aboutBanner.fields.bannerContent.en-US}}<p class="bnrtxt">{{aboutBanner.fields.bannerContent.en-US}}</p>{{/aboutBanner.fields.bannerContent.en-US}}
+                {{#aboutBanner.fields.ctaAction.en-US}}<a href="{{aboutBanner.fields.ctaAction.en-US}}" class="page-scroll btn btn-primary">{{/aboutBanner.fields.ctaAction.en-US}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <!-- Start About-section 2 -->
+        <section id="about-section-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                   <div class="about-text">
+                    <p>{{aboutCapabilities.title}}</p>
+                   </div>
+                   
+                   <div class="skill-shortcode">
+                        {{#aboutCapabilities.skillsList}}
+                       <!-- Progress Bar -->
+                        <div class="skill">
+                            <p>{{skillName}}</p>
+                            <div class="progress">         
+                                <div class="progress-bar" role="progressbar"  data-percentage="{{skillDataPercentage}}">
+                                    <span class="progress-bar-span" >{{skillPercentageTitle}}</span>
+                                    <span class="sr-only">{{description}}</span>
+                                </div>
+                            </div>  
+                        </div>
+                       {{/aboutCapabilities.skillsList}}
+                                                            
+                    </div>
+                   
+               </div>
+                <div class="col-md-6 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="300ms">
+                    
+                    <!-- Start Accordion Section -->
+                    <div class="panel-group" id="accordion">
+
+                        {{#customTabs}}
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-{{orderNum}}" class="{{collapsedDefault}}">
+                                        <i class="fa fa-angle-left control-icon"></i> {{tabTitle}}
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse-{{orderNum}}" class="panel-collapse collapse">
+                                <div class="panel-body">{{tabContent}}</div>
+                            </div>
+                        </div>
+                        {{/customTabs}}
+                    </div>
+                    <!-- End Accordion section -->
+                    
+                </div><!--/.col-md-6 -->
+                </div>
+            </div>
+        </section>
+        <!-- Start About-section 2 -->
+        
+        
+        <!-- Start Call to Action Section -->
+
+
+
+<!-- Start Team Member Section -->
+<section id="team-section">
+     <div class="container">
+         <div class="row">
+             <div class="col-md-12">
+                 <div class="section-title text-center wow fadeInDown" data-wow-duration="2s" data-wow-delay="50ms">
+                     <h2>{{profileModel.headingText}}</h2>
+                     <p>{{profileModel.subHeadingText}}</p>
+                 </div>
+             </div>
+         </div>
+         <div class="row">
+             {{#profileModel.profileTileList}}
+
+             <div class="col-md-3 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="300ms">
+                 <div class="team-member">
+                     <img src="{{imageUrl}}" class="img-responsive" alt="">
+                     <div class="team-details">
+                         <h4>{{fullName}}</h4>
+                         <p>{{designation}}</p>
+                         <ul>
+                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+             {{/profileModel.profileTileList}}
+         </div>
+     </div>
+ </section>
+<!-- End Team Member Section -->
+
+
+
+{{> footer.template.html}}

@@ -11,9 +11,11 @@
 	<groupId>com.contentful</groupId>
 	<artifactId>contentful</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-<!--
-	<packaging>war</packaging>
--->
+	<packaging>jar</packaging>
+
+	<!--
+        <packaging>war</packaging>
+    -->
 	<name>Contentful Web App</name>
 	<description>Demo Project For Contentfull Webapp</description>
 
@@ -29,6 +31,19 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.github.mjeanroy</groupId>
+			<artifactId>springmvc-mustache</artifactId>
+			<version>0.4.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.spullara.mustache.java</groupId>
+			<artifactId>compiler</artifactId>
+			<version>0.9.4</version>
 		</dependency>
 
 		<dependency>
@@ -53,6 +68,26 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
+			<groupId>com.contentful.java</groupId>
+			<artifactId>cma-sdk</artifactId>
+			<version>3.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.findbugs</groupId>
+			<artifactId>jsr305</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.contentful</groupId>
+			<artifactId>rich-text-renderer-java</artifactId>
+			<version>master-bfaacf49d6-1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.contentful</groupId>
+			<artifactId>contentful.java</artifactId>
+			<version>v10.3.1</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -72,6 +107,10 @@
 				<enabled>true</enabled>
 			</releases>
 		</repository>
+			<repository>
+				<id>jitpack.io</id>
+				<url>https://jitpack.io</url>
+			</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
@@ -87,6 +126,12 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.2.6.RELEASE</version>
+				<configuration>
+<!--					<jvmArguments>-->
+<!--						-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005-->
+<!--					</jvmArguments>-->
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

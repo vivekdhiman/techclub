@@ -1,0 +1,43 @@
+{{> header.template.html}}
+
+<div class="banner" style="background-image: url('{{portFolioBanner.fields.backgroundImage.en-US.url}}')">
+    <div class="overlay">
+        <div class="container">
+            <div class="intro-text">
+                <h1>{{portFolioBanner.fields.bannerHeading.en-US}} <span>{{portFolioBanner.fields.bannerSubheading.en-US}}</span></h1>
+                <p class="bnrtxt">{{portFolioBanner.fields.bannerContent.en-US}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Start Portfolio Section -->
+        <section id="portfolio" class="portfolio-section-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                        <!-- Start Portfolio items -->
+                        <ul id="portfolio-list">
+                            {{#portfolioWorkList}}
+                            <li class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay="300ms">
+                                <div class="portfolio-item">
+                                    <img src="{{imageUrl}}" class="img-responsive" alt="" />
+                                    <div class="portfolio-caption">
+                                        <h4>{{headingText}}</h4>
+                                        <p>{{subHeadingText}}</p>
+                                        <a href="#portfolio-modal" data-toggle="modal" class="link-1"><i class="fa fa-magic"></i></a>
+                                        <a href="#" class="link-2"><i class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </li>
+                            {{/portfolioWorkList}}
+                            
+                        </ul>
+                        <!-- End Portfolio items -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Portfolio Section -->
+
+{{> footer.template.html}}

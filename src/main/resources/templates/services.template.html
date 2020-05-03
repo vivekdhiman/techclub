@@ -1,0 +1,58 @@
+{{> header.template.html}}
+
+<div class="banner" style="background-image: url('{{services.fields.backgroundImage.en-US.url}}')">
+    <div class="overlay">
+        <div class="container">
+            <div class="intro-text">
+                <h1>{{services.fields.bannerHeading.en-US}} <span>{{services.fields.bannerSubheading.en-US}}</span></h1>
+                {{#services.fields.bannerContent.en-US}}<p class="bnrtxt">{{services.fields.bannerContent.en-US}}</p>{{/services.fields.bannerContent.en-US}}
+                {{#services.fields.ctaAction.en-US}}<a href="{{services.fields.ctaAction.en-US}}" class="page-scroll btn btn-primary">{{/services.fields.ctaAction.en-US}}</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Start Service Section -->
+        <section id="service-section">
+            <div class="container">
+                <div class="row">
+                    {{#richMediaList}}
+                    <div class="col-md-4">
+                        <div class="services-post">
+				            <img src="{{imageUrl}}">
+				            <h2>{{heading}}</h2>
+							<p>{{subHeading}}</p>
+				        </div>
+                    </div>
+                    {{/richMediaList}}
+
+                </div>
+            </div>
+        </section>
+        <!-- Start Service Section -->
+        
+        
+        <!-- Start Fun Facts Section -->
+    <section class="fun-facts">
+        <div class="container">
+            <div class="row">
+                {{#funFactDataList}}
+                    <div class="col-xs-12 col-sm-4 col-md-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="300ms">
+                      <div class="counter-item">
+                        <i class="fa {{iconClass}}"></i>
+                        <div class="timer" data-to="{{dataCount}}" data-speed="5000"></div>
+                          <p>{{bottomSubHeading}}</p>
+                        <h3>{{bottomHeading}}</h3>
+                      </div>
+                    </div>
+                {{/funFactDataList}}
+            </div>
+        </div>
+    </section>
+    <!-- End Fun Facts Section -->
+        
+        
+        <!-- Start Pricing Section -->
+
+
+
+{{> footer.template.html}}

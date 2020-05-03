@@ -1,0 +1,54 @@
+{{> headerlibs.template.html}}
+<body>
+
+<header class="clearfix">
+
+    <!-- Start  Logo & Naviagtion  -->
+            <div class="navbar navbar-default navbar-top">
+
+
+                <div class="container">
+                    <div class="navbar-header">
+                        <!-- Stat Toggle Nav Link For Mobiles -->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <!-- End Toggle Nav Link For Mobiles -->
+                        <a class="navbar-brand" href="/"><img src={{logo.url}} width="10%" >
+
+                        </a>
+                    </div>
+                    {{#home}}
+                    {{#fields}}
+                    <div class="navbar-collapse collapse">
+
+                        <!-- Start Navigation List -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a class="active" href="{{fields.menuItemAUrl.en-US}}">{{fields.menuItemA.en-US}}</a>
+                            </li>
+                            <li>
+                                <a href="{{fields.menuItemBUrl.en-US}}">{{fields.menuItemB.en-US}}</a>
+                            </li>
+                            <li>
+                                <a href="{{fields.menuItemCUrl.en-US}}">{{fields.menuItemC.en-US}}</a>
+                            </li>
+                            <li>
+                                <a href="{{fields.menuItemDUrl.en-US}}">{{fields.menuItemD.en-US}}</a>
+                            </li>
+                            <li><a href="{{fields.menuItemEUrl.en-US}}">{{fields.menuItemE.en-US}}</a>
+                            </li>
+                        </ul>
+                        <!-- End Navigation List -->
+                    </div>
+                    {{/fields}}
+                    {{/home}}
+                </div>
+
+
+            </div>
+            <!-- End Header Logo & Naviagtion -->
+
+        </header>
+
+
