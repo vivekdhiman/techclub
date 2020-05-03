@@ -57,4 +57,8 @@ public class HomePageController {
 
         return view;
     }
+
+    public String index() {
+        return "forward:/about";
+    }
 }
