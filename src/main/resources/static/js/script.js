@@ -64,6 +64,7 @@ $(document).ready(function ($) {
             }
         });
 
+        $('section#about-section-2 div#accordion .panel.panel-default:first-child h4.panel-title a').click();
     });    
     
     

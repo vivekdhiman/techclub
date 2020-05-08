@@ -2269,4 +2269,12 @@ section#service-section {
 section#service-section .container {
     width: 100%;
 }
+@media only screen and (max-width:480px){
+    .banner .intro-text p {
+        font-size: 30px;
+    }
+    .banner .intro-text h1 {
+        font-size: 32px;
+    }
+}
 
