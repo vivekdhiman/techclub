@@ -523,6 +523,7 @@ a.navbar-brand {
     font-weight: 300;
     line-height: 35px;
     letter-spacing: 3px;
+    margin: auto;
     margin-bottom: 55px;
     -webkit-animation: bounceInLeft;
     -moz-animation: fadeInLeft;
@@ -2188,7 +2189,7 @@ body {
         align-items: center;
     }
     .services-post>img {
-        margin-bottom: 20px;
+        margin: auto;
         width: 100%;
     }
     .services-post {
